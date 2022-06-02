@@ -3,7 +3,6 @@ import { AuthContext } from '../manegecontext/auth'
 
 const FormDisplay = ({displayName, users}) => {
     const [ newdisplayName , setdisplayName] = useState(displayName)
-
     const Onchange = evt => {
         setdisplayName(evt.target.value)
     }
@@ -16,6 +15,7 @@ const FormDisplay = ({displayName, users}) => {
     return(<>
         <input type='text' value={newdisplayName} onChange={Onchange}  />
         <button onClick={save} >Save New Name</button>
+        
     </>)
 }
 
