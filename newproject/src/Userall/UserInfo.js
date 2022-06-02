@@ -28,14 +28,14 @@ if(auth.users === null){
 
 const {displayName} = auth.users
 const [alternativeDisplayName] = auth.users.email.split('@')
-const {dn} = displayName || alternativeDisplayName
+const dn = displayName || alternativeDisplayName
 
 
-  return(<div>
+  return(<>
         <h1> Hi {dn}</h1>
         <FormDisplay displayName={dn} users={auth.users} />
          <button onClick={auth.singout} >Sing out </button>
-  </div>)
+  </>)
 }
 
 export default UserInfo
