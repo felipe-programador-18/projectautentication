@@ -20,8 +20,9 @@ const SingUserSin = () => {
 
     console.log('testing here place' ,auth.users)
     
-    return(<div className=' d-flex text-center bg-primary '>
-           <h1 className='text-center'> Sing in Account:</h1>
+    return(<>
+    <div className='text-center '>
+           <h1> Sing in Account:</h1>
            
             {auth.singUserInside.SingCreateState.error !== '' && 
             <p> {auth.singUserInside.SingCreateState.error} </p> }
@@ -29,8 +30,8 @@ const SingUserSin = () => {
            <input value={form.email} onChange={Onchange('email')} placeholder='Write your email:'  />
            <input value={form.password} onChange={Onchange('password')} />
            <button className='bg-dark' onClick={() => auth.singUserInside.singUserInside(form.email, form.password) } >Sing In</button>
-
-    </div>)
+           </div>
+   </>)
 }
 
 export default SingUserSin
