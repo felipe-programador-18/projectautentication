@@ -5,8 +5,8 @@ import { AuthContext } from '../manegecontext/auth'
 const Comment = ({comment}) => {
    const auth = useContext(AuthContext)
    console.log(auth)
-   return (<div className='d-flex bg-danger text-center'>
-       <div className='d-flex' >
+   return (<div className=''>
+      <div className='test'>
        {comment.content} by : {comment.users.name} in: <Time TIMESTAMP={comment.createAT} />
        </div>
     </div>) 
