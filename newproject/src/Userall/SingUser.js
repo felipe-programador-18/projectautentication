@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { AuthContext } from '../manegecontext/auth'
-
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 const SingUserSin = () => {
     const auth = useContext(AuthContext)
@@ -29,6 +29,8 @@ const SingUserSin = () => {
            <input value={form.password} onChange={Onchange('password')} />
            <button className='bg-dark' onClick={() => auth.singUserInside.singUserInside(form.email, form.password) } >Sing In</button>
            </div>
+            
+            
    </>)
 }
 
