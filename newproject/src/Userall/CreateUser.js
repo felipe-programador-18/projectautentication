@@ -16,7 +16,7 @@ const CreateUser = () => {
         return null
     }
     
-    return(<div className='d-flex'>
+    return(<div className=''>
        <h1> Create new account!</h1>
         { auth.CreateUser.CreateUser.error !== '' && 
         <p className='bg-warning'> {auth.CreateUser.CreateUser.error} </p> }
