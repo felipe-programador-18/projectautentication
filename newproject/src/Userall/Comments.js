@@ -15,7 +15,7 @@ const Comments = () => {
   }
    
    return ids.map(id =>{
-      return  <Comment key={id} comment={data[id]} /> 
+      return  //<Comment key={id} comment={data[id]} /> 
   })
 
 }
