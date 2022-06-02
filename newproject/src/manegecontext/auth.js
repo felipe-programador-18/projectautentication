@@ -95,12 +95,12 @@ export const AuthProvider = ({children}) =>{
     const[CreateUserState, CreateUser] = UserCreateUser()
     const[SingCreateState, singUserInside] = useSingUser()
 
-    return ( <AuthProvider value={{users,
+    return ( <AuthContext.Provider value={{users,
      CreateUser:{ CreateUser, CreateUserState}
         ,
      singUserInside:{singUserInside, SingCreateState},
      singout
       }} >
         {children}
-    </AuthProvider>)
+    </AuthContext.Provider>)
 }
