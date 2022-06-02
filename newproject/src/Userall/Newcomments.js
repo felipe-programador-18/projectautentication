@@ -30,10 +30,12 @@ const NewComents = () => {
       }
   } 
 
-  return(<div className='text-center d-flex justify-content-center align-items-center' >
-           <textarea className='text-center'  value={comment}  onChange={evt => setcomment(evt.target.value)} /> <br/>
-           <button className='' onClick={CreateComme} >Toggle</button>
-  </div>)
+  return(<>
+  <div>
+           <textarea    value={comment}  onChange={evt => setcomment(evt.target.value)} /> <br/>
+           <button  className='bg-primary' onClick={CreateComme} >Toggle</button>
+           </div>
+  </>)
 
 }
 
