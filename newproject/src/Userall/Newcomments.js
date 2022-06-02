@@ -3,10 +3,12 @@ import {AuthContext} from '../manegecontext/auth'
 import firebase from '../folderfirebase/firebase'
 import {useDataBasePush } from '../folderfirebase/database'
 
+
 const NewComents = () => {
   const [,save] = useDataBasePush ('comments')
   const [ comment, setcomment] = useState('') 
-  const auth = useContext(AuthContext) 
+  const auth = useContext(AuthContext)
+   
   if(auth.users === null){
       return null
   }  
