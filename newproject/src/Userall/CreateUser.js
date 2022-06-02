@@ -20,7 +20,7 @@ const CreateUser = () => {
        <h1> Create new account!</h1>
         { auth.CreateUser.CreateUser.error !== '' && 
         <p className='bg-warning'> {auth.CreateUser.CreateUser.error} </p> }
-
+             
        <div class="mb-3 row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
