@@ -17,11 +17,9 @@ const SingUserSin = () => {
     if(auth.users !== null){
         return null
     }
-
-    console.log('testing here place' ,auth.users)
     
     return(<>
-    <div className='text-center '>
+    <div className='text-center'>
            <h1> Sing in Account:</h1>
            
             {auth.singUserInside.SingCreateState.error !== '' && 
