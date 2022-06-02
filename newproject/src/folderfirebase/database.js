@@ -5,8 +5,7 @@ export const useDataBase = endpoints => {
     const [data, setdata] = useState({})
     useEffect(() => {
     const ref = firebase.database().ref(endpoints)
-     ref.on('value', snapshoot =>{
-      console.log(snapshoot.val())  
+     ref.on('value', snapshoot =>{  
       setdata(snapshoot.val())
     })
     return () => {
@@ -18,7 +17,6 @@ export const useDataBase = endpoints => {
 
 export const useDataBasePush = endpoints => {
     const [status, setstatus] = useState('')
-    console.log('testing test here inside usedabapush', status)
     const save = data => {
      const ref = firebase.database().ref(endpoints)
      ref.push(data, err => {
@@ -29,5 +27,5 @@ export const useDataBasePush = endpoints => {
        }
      })
     }
-    return [save, status]
+    return [status, save]
 }
