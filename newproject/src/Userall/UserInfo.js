@@ -31,10 +31,12 @@ const [alternativeDisplayName] = auth.users.email.split('@')
 const dn = displayName || alternativeDisplayName
 
 
-  return(<>
-        <h1> Hi {dn}</h1>
+  return(<> 
+       <div className='' >
+        <h1 className=''> Hi {dn}</h1>
         <FormDisplay displayName={dn} users={auth.users} />
          <button onClick={auth.singout} >Sing out </button>
+   </div>
   </>)
 }
 
