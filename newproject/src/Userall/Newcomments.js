@@ -3,7 +3,7 @@ import {AuthContext} from '../manegecontext/auth'
 import firebase from '../folderfirebase/firebase'
 import {useDataBasePush } from '../folderfirebase/database'
 
-
+//verify somethings here
 const NewComents = () => {
   const [,save] = useDataBasePush ('comments')
   const [ comment, setcomment] = useState('') 
