@@ -28,6 +28,9 @@ const SingUserSin = () => {
            <input value={form.email} onChange={Onchange('email')} placeholder='Write your email:'  />
            <input value={form.password} onChange={Onchange('password')} />
            <button className='bg-dark' onClick={() => auth.singUserInside.singUserInside(form.email, form.password) } >Sing In</button>
+           
+            <Link to='/createuser' >Registered</Link>
+            <p> Don't have account yet ?</p>
            </div>
             
             
