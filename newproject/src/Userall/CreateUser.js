@@ -1,4 +1,5 @@
 import React,{useContext, useState} from 'react'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../manegecontext/auth'
 
 const CreateUser = () => {
@@ -32,8 +33,9 @@ const CreateUser = () => {
      <div class="col-sm-10">
       <input type="password" onChange={onChangeEvt('password')}  value={form.password}  placeholder='Your Password:'  id="inputPassword"   />
      </div>
+     <Link to='/comment' >  
      <button  className='bg-light' onClick={() => auth.CreateUser.CreateUser(form.email, form.password)} >Create Account</button>
-      
+     </Link>
       <button>Go by page Sing In!!</button>
 </div>
       
