@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { AuthContext } from '../manegecontext/auth'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const SingUserSin = () => {
     const auth = useContext(AuthContext)
